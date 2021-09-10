@@ -1,3 +1,15 @@
 <script>
-    console.log("help")
+    let path = window.location.href;
+    path = path.slice(path.lastIndexOf("/")+1);
+
+    var pages = {
+        schedule: "https://docs.google.com/spreadsheets/d/1thhOvQDd9Hh2_119km9zG7QM0Mv9rFGpkKqn3S3sUbc/edit?usp=sharing",
+        devpost: "https://vividhacks.devpost.com/"
+    }
+
+    if (!pages[path]){
+        window.location.href="https://vividhacks.tech"
+    }else{
+        window.location.href=pages[path]
+    }
 </script>
